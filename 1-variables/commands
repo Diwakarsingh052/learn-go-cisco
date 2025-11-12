@@ -1,0 +1,3 @@
+// Init a module
+// helpful to organize code in packages and getting external deps
+go mod init moduleName
