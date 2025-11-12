@@ -7,8 +7,8 @@ func main() {
 	// every types have a default value
 	var a int // int default is 0
 	var b string = "hello"
-	var c = true
-	_, _ = c, b
+	var c, u = true, "abc"
+	_, _, _ = c, b, u
 	//c = 10 // we cant change the type // go is a statically typed language
 	fmt.Println(a, b)
 
