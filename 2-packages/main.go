@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
-	calc.add(1, 2)
+	calc.Add(1, 2)
+	setup()
 }

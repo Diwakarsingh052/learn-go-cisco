@@ -1,0 +1,13 @@
+don't use numbers in package names,
+version numbers are fine, but should be used when required
+
+your package name should not start with a number
+avoid using _ or - in package names
+
+use all letters in lower cases
+
+don't use spaces
+
+all files in the package must belong to one package name only
+
+don't use names like util, common, helpers (general guideline)
