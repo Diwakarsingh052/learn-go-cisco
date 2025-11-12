@@ -7,5 +7,6 @@ func main() {
 	//calc.Add(1, 2)
 	//setup()
 	users.Get()
+	users.Store()
 
 }
