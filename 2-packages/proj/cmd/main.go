@@ -1,11 +1,11 @@
 package main
 
-import (
-	"proj/calc"
-)
+import "proj/users"
 
 // go run . // to compile and run all the package main files
 func main() {
-	calc.Add(1, 2)
-	setup()
+	//calc.Add(1, 2)
+	//setup()
+	users.Get()
+
 }
