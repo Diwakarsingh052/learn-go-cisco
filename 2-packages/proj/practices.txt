@@ -11,3 +11,6 @@ don't use spaces
 all files in the package must belong to one package name only
 
 don't use names like util, common, helpers (general guideline)
+
+go module is created at the root of your project directory
+one go module for one project
