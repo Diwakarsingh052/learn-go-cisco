@@ -14,3 +14,5 @@ don't use names like util, common, helpers (general guideline)
 
 go module is created at the root of your project directory
 one go module for one project
+
+cmd directory is used to store multiple package main files or executables
