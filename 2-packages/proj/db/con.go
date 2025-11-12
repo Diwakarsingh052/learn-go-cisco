@@ -9,7 +9,7 @@ package db
 
 // we need to use struct to store connection states, and fix the problem
 
-//var Conn = "mysql"
+// var Conn = "mysql"
 
 var conn string
 
