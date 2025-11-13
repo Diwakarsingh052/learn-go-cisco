@@ -12,8 +12,16 @@ import (
 func main() {
 	// Background context is empty context which is used to store timeout values
 	ctx := context.Background()
-	ctx, cancel := context.WithTimeout(ctx, 1*time.Millisecond)
+	//updating the context with timeout
+	// adding a timer value to the context
+	// WithTimeout is a func which updates the existing context with timeout value
+	ctx, cancel := context.WithTimeout(ctx, 5*time.Second)
+
+	// cancel clean up the resources taken up by the context
+	// if cancel is not called in defer , ctx would be immediately canceled
+	// which means the timer would be closed and the resources would be cleaned up
 	defer cancel()
+
 	// constructing a new request with context
 	// we have not made the request yet to the remote server
 	req, err := http.NewRequestWithContext(
