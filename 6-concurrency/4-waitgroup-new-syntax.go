@@ -13,6 +13,8 @@ func main() {
 
 	//wg.Add(5)
 	for i := 1; i <= 5; i++ {
+		// wg.Go internally calls wg.Add(1), and defer wg.Done()
+		// and it runs a goroutine which would call the function internally
 		wg.Go(func() {
 			fmt.Println("work finished, id:", i)
 		})
