@@ -45,3 +45,7 @@ func addV2(wg *sync.WaitGroup) {
 	fmt.Println("addition")
 
 }
+
+// use a for loop to spin 5 goroutines
+// each goroutine prints hello {i} // i is the loop counter
+// wait for all the goroutines to finish and make sure no deadlock occurs
