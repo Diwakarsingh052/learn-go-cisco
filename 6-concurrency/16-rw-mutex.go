@@ -39,8 +39,7 @@ func UpdateY(val int, m *sync.RWMutex) {
 		time.Sleep(5 * time.Second)
 		y = val
 		fmt.Println("y variable updated")
-
-		// here we work with x
+		
 	}()
 
 }
