@@ -6,6 +6,13 @@ import "fmt"
 // Interface is automatically implemented by the struct
 // if the struct has all the methods of the interface
 
+// Polymorphism means that a piece of code changes its behavior depending on the
+// concrete data it’s operating on // Tom Kurtz, Basic inventor
+
+// "Don’t design with interfaces, discover them". - Rob Pike
+
+// with interface we can switch between multiple implementations from a single variable of interface
+
 type Reader interface {
 	Read(b []byte) (int, error)
 }
@@ -34,7 +41,11 @@ func (i IO) Read(b []byte) (int, error) {
 
 // ReadData accepts any type that implements Reader interface
 func ReadData(r Reader) {
+	fmt.Printf("%T\n", r)
+	r.Read(nil)
+
 }
+
 func main() {
 
 	f := File{"test.txt"}
