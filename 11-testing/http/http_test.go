@@ -29,7 +29,8 @@ func TestDoubleHandler(t *testing.T) {
 			expectedBody:   "missing query parameter",
 		},
 	}
-
+	// we are running the test without running a actual http server
+	// ranging over the test cases
 	for _, tc := range tt {
 		t.Run(tc.name, func(t *testing.T) {
 
@@ -38,6 +39,9 @@ func TestDoubleHandler(t *testing.T) {
 			w := httptest.NewRecorder()
 
 			r := httptest.NewRequest(http.MethodGet, "/double?v="+tc.queryParam, nil)
+
+			// calling the handler function directly
+			// we are not running the server to call the function
 			doubleHandler(w, r)
 
 			require.Equal(t, tc.expectedStatus, w.Code)

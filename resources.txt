@@ -1,0 +1,10 @@
+
+
+documentation:- https://go.dev/doc/
+pkg.go.dev
+
+Book:- https://www.amazon.in/Learning-Go-Jon-Bodner-ebook/dp/B0CS5DY1VN
+
+
+style guide:- https://google.github.io/styleguide/go/best-practices
+              https://docs.gitlab.com/ee/development/go_guide/

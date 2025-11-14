@@ -1,3 +1,12 @@
 // Init a module
 // helpful to organize code in packages and getting external deps
 go mod init moduleName
+
+
+// to download external dependencies, use go get command
+go get moduleName
+
+
+// fix deps issues
+// download all the required packages for the project
+// go mod tidy
