@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io"
+)
 
 // Reader is an interface
 // Interface is automatically implemented by the struct
@@ -16,6 +19,7 @@ import "fmt"
 type Reader interface {
 	Read(b []byte) (int, error)
 }
+
 type File struct {
 	Name string
 }
@@ -39,8 +43,8 @@ func (i IO) Read(b []byte) (int, error) {
 //		i.Read(nil)
 //	}
 
-// ReadData accepts any type that implements Reader interface
-func ReadData(r Reader) {
+// // ReadData accepts any type that implements Reader interface
+func ReadData(r io.Reader) {
 	fmt.Printf("%T\n", r)
 	r.Read(nil)
 

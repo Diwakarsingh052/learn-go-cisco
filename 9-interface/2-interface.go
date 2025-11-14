@@ -4,6 +4,8 @@ import "fmt"
 
 type Api interface {
 	call()
+	// Bigger the interface weaker the abstraction // Rob Pike
+	//abc() // all methods of interface must be implemented to implement the interface
 }
 type api struct {
 	url string
