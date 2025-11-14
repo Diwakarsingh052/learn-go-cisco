@@ -32,7 +32,7 @@ func (i IO) Read(b []byte) (int, error) {
 //		i.Read(nil)
 //	}
 
-// ReadData accepts any struct that implements Reader interface
+// ReadData accepts any type that implements Reader interface
 func ReadData(r Reader) {
 }
 func main() {
