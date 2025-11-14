@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"runtime/debug"
 	"sync"
 )
 
@@ -38,6 +39,7 @@ func recoverPanic() {
 	msg := recover()
 	if msg != nil {
 		fmt.Println("recovered from panic", msg)
+		fmt.Printf("%s\n", debug.Stack())
 		return
 	}
 }
