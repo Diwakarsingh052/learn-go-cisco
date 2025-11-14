@@ -24,6 +24,12 @@ func (a mockApi) call() {
 }
 
 func CallApi(api Api) {
+	// type assertion
+	// checking if the interface is of type mockApi
+	m, ok := api.(mockApi)
+	if ok {
+		fmt.Println("test environment running", m.url)
+	}
 	api.call()
 }
 

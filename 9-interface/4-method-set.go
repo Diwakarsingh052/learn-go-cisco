@@ -19,7 +19,8 @@ func (p Person) Speak2() string {
 }
 
 func main() {
-	var p Person       //[Speak2]
+	var p Person //[Speak2]
+	p.Speak()
 	var s Speaker = &p // [Speak, Speak2]
 	s.Speak()
 

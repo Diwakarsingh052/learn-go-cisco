@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+// when to use pointer receiver methods
+// https://go.dev/doc/faq#methods_on_values_or_pointers
+
 type person struct {
 	name string
 }
