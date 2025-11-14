@@ -33,7 +33,7 @@ func SlowFunc(ctx context.Context, s string) (int, error) {
 	if err != nil {
 		return 0, err
 	}
-	time.Sleep(1 * time.Second)
+	time.Sleep(5 * time.Second)
 	select {
 	// Done channel would receive a signal when the context is canceled or times is over
 	case <-ctx.Done():
