@@ -1,6 +1,8 @@
 package main
 
-import "proj/db"
+import (
+	"proj/db"
+)
 
 func main() {
 	c, err := db.NewConf("mysql")
@@ -8,5 +10,6 @@ func main() {
 		panic(err)
 	}
 	c.AddUsers()
-	
+	//log.New()
+	//os.OpenFile()
 }
