@@ -3,8 +3,12 @@ package main
 import "net/http"
 
 func main() {
+	//registering the handler function
+	// registering the route
+
 	http.HandleFunc("/home", home)
 	// starts the server on the specified port
+	// handler is nil , which means we are using the http default handler for routing
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		panic(err)
