@@ -23,6 +23,7 @@ func homeV2(w http.ResponseWriter, r *http.Request) {
 	wg := new(sync.WaitGroup)
 	wg.Go(func() {
 		// when panic happens in a goroutine, it would be recovered automatically
+		// we must call the recoverPanic in defer to guarantee its execution
 		defer recoverPanic()
 		// panic in a manual spawned goroutine will crash the server
 		// it would not recover from the panic automatically
