@@ -1,5 +1,10 @@
 package main
 
+import (
+	"encoding/json"
+	"net/http"
+)
+
 // Fields must be exported for json to work
 // ` ` back ticks are used to define raw strings
 // ` ` don't do any processing on the data
@@ -18,12 +23,22 @@ func main() {
 
 }
 
-func SendJSON() {
+func SendJSON(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	//
+	u := user{
+		FirstName: "abc",
+		Password:  "xyz",
+		Email:     "abc@gmail.com",
+	}
 
-	// create a variable of type user
+	// NewEncoder will encode the struct to json and write the response to the client
 
-	// convert the struct to json, json.Marshal()
-
-	// send the json using w.Write()
+	// converting the struct to json
+	// send the json response to the client
+	err := json.NewEncoder(w).Encode(u)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }

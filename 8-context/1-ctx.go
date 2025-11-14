@@ -21,6 +21,7 @@ func main() {
 	// WithTimeout is a func which updates the existing context with timeout value
 	ctx, cancel := context.WithTimeout(ctx, 5*time.Second)
 	defer cancel()
+
 	// cancel clean up the resources taken up by the context
 	// if cancel is not called in defer , ctx would be immediately canceled
 	// which means the timer would be closed and the resources would be cleaned up
